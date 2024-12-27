@@ -159,6 +159,7 @@ plt.ylabel('Number of Purchases')
 plt.show()
 
 # Q11. Are there any correlations between the size of the product and the purchase amount?
+# Create a scatter plot to visualize the correlation between product size and purchase amount
 plt.figure(figsize=(10, 6))
 sns.scatterplot(data=shop, x='Size', y='Purchase Amount (USD)')
 plt.title('Correlation between Product Size and Purchase Amount')
@@ -167,7 +168,9 @@ plt.ylabel('Purchase Amount (USD)')
 plt.show()
 
 # Q12. Which shipping type is preferred by customers for different product categories?
+# Group by 'Category' and 'Shipping Type' and get the count of each combination
 shipping_preference = shop.groupby(['Category', 'Shipping Type']).size().unstack()
+# Create a stacked bar plot to visualize shipping preferences by category
 shipping_preference.plot(kind='bar', stacked=True, figsize=(12, 8))
 plt.title('Shipping Preference by Product Category')
 plt.xlabel('Category')
@@ -176,7 +179,9 @@ plt.legend(title='Shipping Type')
 plt.show()
 
 # Q13. How does the presence of a discount affect the purchase decision of customers?
+# Group by 'Discount Applied' and calculate the mean purchase amount
 discount_effect = shop.groupby('Discount Applied')['Purchase Amount (USD)'].mean().reset_index()
+# Create a bar plot to visualize the effect of discount on purchase amount
 plt.figure(figsize=(10, 6))
 sns.barplot(data=discount_effect, x='Discount Applied', y='Purchase Amount (USD)')
 plt.title('Effect of Discount on Purchase Amount')
@@ -185,7 +190,9 @@ plt.ylabel('Average Purchase Amount (USD)')
 plt.show()
 
 # Q14. Are there any specific colors that are more popular among customers?
+# Get the count of each color
 color_popularity = shop['Color'].value_counts()
+# Create a bar plot to visualize the popularity of colors among customers
 plt.figure(figsize=(10, 6))
 sns.barplot(x=color_popularity.index, y=color_popularity.values)
 plt.title('Popularity of Colors among Customers')
@@ -194,10 +201,12 @@ plt.ylabel('Count')
 plt.show()
 
 # Q15. What is the average number of previous purchases made by customers?
+# Calculate and display the average number of previous purchases
 avg_previous_purchases = shop['Previous Purchases'].mean()
 print(f"The average number of previous purchases made by customers is: {avg_previous_purchases}")
 
 # Q16. How does the purchase amount differ based on the review ratings given by customers?
+# Create a box plot to visualize purchase amount by review rating
 plt.figure(figsize=(10, 6))
 sns.boxplot(data=shop, x='Review Rating', y='Purchase Amount (USD)')
 plt.title('Purchase Amount by Review Rating')

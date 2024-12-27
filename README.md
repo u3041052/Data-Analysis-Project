@@ -6,7 +6,7 @@ The project focuses on analysizing a sales dataset and answering some basic ques
 
 **File Structure**
 - shopping_trends_updated.csv: The original dataset in CSV format.
-- shopping_trends_updated.xlsx: The converted dataset in Excel format.
+- shopping_trends_updated.xlsx: The converted dataset in Excel format and I have uploaded this dataset so that you can also do your own analysis.
 - README.md: Project documentation and Information.
 
 **Requirements**

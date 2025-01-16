@@ -15,6 +15,16 @@ The project focuses on analysizing a sales dataset and answering some basic ques
 - Matplotlib
 - Seaborn
 
+### Finding the File Path
+1. **Windows**: Right-click the file, select `Properties`, and combine the `Location` with the file name.
+2. **Mac**: Right-click the file, select `Get Info`, and combine `Where` with the file name.
+3. **Linux**: Use the `pwd` command in the terminal to get the current directory and combine it with the file name.
+
+### Running the Code
+1. Ensure that the `shopping_trends_updated.csv` file is in the same directory as the script.
+2. Run the script in your Python environment.
+
+   
 ## Setup
 1. Install the relevant dependencies
     ```
@@ -26,9 +36,6 @@ The project focuses on analysizing a sales dataset and answering some basic ques
    ```
 
 > **Notes** : If the file path is different, update the `file_path` variable in the script to point to the correct location of `shopping_trends_updated.csv`.
-
-## License
-This project is licensed under the MIT License.
 
 
 ## Data Description

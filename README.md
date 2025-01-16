@@ -25,6 +25,12 @@ The project focuses on analysizing a sales dataset and answering some basic ques
    python salesdataset_analysis.py
    ```
 > **Note**: Ensure all dependencies are installed before running the project.
+> ## Notes
+- If the file path is different, update the `file_path` variable in the script to point to the correct location of `shopping_trends_updated.csv`.
+
+## License
+This project is licensed under the MIT License.
+
 
 ## Data Description
 The dataset used in this project includes the following columns:

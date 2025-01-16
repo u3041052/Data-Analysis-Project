@@ -5,14 +5,14 @@ Created on Fri Dec 20 14:37:06 2024
 
 @author: shivam
 """
-
+import os
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the data
-file_path = '/home/shivam/Downloads/shopping_trends_updated.csv'
+file_path = os.path.join(os.getcwd(), 'shopping_trends_updated.csv')
 shop = pd.read_csv(file_path)
 print(shop.shape)
 
